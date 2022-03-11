@@ -12,26 +12,26 @@ import java.util.HashSet;
  * @author Miguel A. Naranjo, Cristian C. Tuso.
  */
 //Coleccion concreta del Correo
-public class contactosCorreo {
+public class contactosCorreo implements ColeccionIterable {
 
     private HashSet<String> hsetCorreo;
-    private int posicion;
 
     //En el constructor se inicializa el hashset
     public contactosCorreo() {
         hsetCorreo = new HashSet<String>();
+        hsetCorreo.add("cTuso@gmail.com");
+        hsetCorreo.add("miguelanjoya@gmail.com");
+        hsetCorreo.add("andcam@hotmail.com");
+        hsetCorreo.add("miguelanjoya@gmail.com");
+        hsetCorreo.add("lauT@outlook.com");
+        hsetCorreo.add("ascg@hotmail.com");
+        hsetCorreo.add("ascg@hotmail.com");
 
-    }
-
-    //Se crea el metodo que permitira guardar los correos en el hashset
-    public void agregar(String corr) {
-        hsetCorreo.add(corr);
-        posicion++;
     }
 
     //Se crea el metodo que permitira crear un objeto Iterador,
     //pasandole por parametro un hashset con la informacion
-    public contactosCorreoIterador Iterador() {
+    public Iterador crearIterador() {
         return new contactosCorreoIterador(hsetCorreo);
     }
 

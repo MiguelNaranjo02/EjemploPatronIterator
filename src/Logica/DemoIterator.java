@@ -13,67 +13,40 @@ package Logica;
 public class DemoIterator {
 
     public static void main(String... args) {
-        //Se inicializan las clases de cada tipo de estructura y red
-        contactosFB contactFacebook = new contactosFB();
-        contactosDrive contactDr = new contactosDrive();
-        contactosCorreo contactCor = new contactosCorreo();
+
+        ColeccionIterable contact;
+        
         //Se inicializa solo un iterador
         Iterador iterator;
+        String contactoActual;
 
-        //Se agregan las urls a la estructura de datos de FB
-        contactFacebook.agregar("https://www.facebook.com/miguelangel.naranjojoya");
-        contactFacebook.agregar("https://www.facebook.com/cristiancamilo.tusso");
-        contactFacebook.agregar("https://www.facebook.com/AndreaF.Gomez");
-        contactFacebook.agregar("https://www.facebook.com/AmyC.Gomez");
-        //Se iguala a la estructura de FB
-        iterator = contactFacebook.iterador();
-
-        //Se itera la estructura de FB, y se imprimen en consola
+        contact = new contactosFB();
+        iterator = contact.crearIterador();
         while (iterator.tieneSiguiente()) {
             // Acceder al elemento
-            String url = (String) iterator.siguiente();
-            System.out.println(url);
+            contactoActual = (String) iterator.siguiente();
+            System.out.println(contactoActual);
 
         }
         System.out.println("");
-        //Se rellena la estructura de datos de Drive con los nombres y celulares
-        contactDr.agregar("Miguel Naranjo", "313465465");
-        contactDr.agregar("Cristian Tuso", "314456484");
-        contactDr.agregar("Camilo G", "314787945");
-        contactDr.agregar("Laura R", "3154654654");
-        //contactDr.agregar("Juanda", "316484654");
-        contactDr.agregar("David", "311456789");
-        contactDr.agregar("Daniel", "3154656789");
 
-        //Se iguala a la estructura de Drive
-        iterator = contactDr.iterador();
-
-        //Se itera la estructura de Drive, y se imprimen en consola
+        contact = new contactosDrive();
+        iterator = contact.crearIterador();
         while (iterator.tieneSiguiente()) {
-            String contactosDrive = (String) iterator.siguiente();
-            System.out.println(contactosDrive);
-            //String[][] contactosDrive = (String[][]) iterator.siguiente();
-            //System.out.println(contactosDrive[0][0] + " - " + contactosDrive[0][1]);
+            // Acceder al elemento
+            contactoActual = (String) iterator.siguiente();
+            System.out.println(contactoActual);
+
         }
 
         System.out.println("");
-        //Se rellena la estructura de datos del correo con direcciones de email
-        contactCor.agregar("cTuso@gmail.com");
-        //contactCor.agregar("andcam@hotmail.com");
-        contactCor.agregar("miguelanjoya@gmail.com");
-        contactCor.agregar("miguelanjoya@gmail.com");
-        contactCor.agregar("ascg@hotmail.com");
-        contactCor.agregar("ascg@hotmail.com");
-        contactCor.agregar("lauT@outlook.com");
-        contactCor.agregar("lauT@outlook.com");
-        
 
-        //Se iguala el iterador a la estructura del correo
-        iterator = contactCor.Iterador();
-        //Se itera la estructura del correo
+        contact = new contactosCorreo();
+        iterator = contact.crearIterador();
         while (iterator.tieneSiguiente()) {
-            String Contactoscorreo = (String) iterator.siguiente();
-            System.out.println(Contactoscorreo);
+            // Acceder al elemento
+            contactoActual = (String) iterator.siguiente();
+            System.out.println(contactoActual);
 
         }
 
