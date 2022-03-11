@@ -8,4 +8,7 @@ El programa en cuestion, rellena automaticamente tres estructuras de datos, una 
 
 ### Codigo
 Se encuentra en el siguiente link:
-[Codigo](https://github.com/MiguelNaranjo02/MODELOS_PROG/tree/master/Ejercicio1/src/Personajes "Codigo")
+[Codigo](https://github.com/MiguelNaranjo02/EjemploPatronIterator/tree/master/src/Logica "Codigo")
+
+### Diagrama de Clases
+[![DIAGRAMA DE CLASES EJERCICIO ITERATOR](https://github.com/MiguelNaranjo02/EjemploPatronIterator/blob/master/Diagrama%20Iterator.png "DIAGRAMA DE CLASES EJERCICIO ITERATOR")](https://github.com/MiguelNaranjo02/EjemploPatronIterator/blob/master/Diagrama%20Iterator.png "DIAGRAMA DE CLASES EJERCICIO ITERATOR")
